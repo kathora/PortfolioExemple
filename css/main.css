@@ -39,6 +39,10 @@
         display: block;
         margin: 55px auto 0;
     }
+
+    .jl-menu{
+        display:none;
+    }
 }
 
 @media screen and (min-width: 576px){
@@ -50,7 +54,48 @@
 }
 
 @media screen and (min-width: 992px){
+    .jl-menu{
+        float: left;
+        display:table;
+        height: 110px;
+        margin-left: 30px;
+    }
 
+    .jl-menu a{
+        text-decoration: none;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        color: #bcbcbc;
+        text-transform: lowercase;
+        display: inline-block;
+        margin: 50px 20px 0 20px;
+        font-weight: 400;
+        position: relative;
+    }
+
+    .jl-menu a:first-child{
+        margin-left: 0;
+    }
+
+    .jl-menu a:hover{
+        color: #2ccb69;
+    }
+
+    .jl-menu a:before{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 4px;
+        background-color: #2ccb69;
+        display: block;
+        bottom: -6px;
+        left: 0;
+        transition: all 0.2s ease-out;
+    }
+
+    .jl-menu a:hover:before{
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 1200px){
